@@ -9,25 +9,6 @@ const App = () => {
   const [tenure, setTenure] = useState(12);
   const [emi, setEmi] = useState();
 
-  const s = "abcsfoiewirwef";
-
-  const freq = {}; // creates an object
-
-  for (let char of s) {
-    //abcsfoiewirwef
-    //1st time - "a" - freq[char] = undefined initially --> 0 + 1 = 1;
-    //2nd time - b - freq[char] = undefined initially --> 0+1 = 1;
-    //i - freq[char] = undefined initially --> 0+1 = 1;
-    //again i for 2nd time => freq[i] = 1, 1+1 = 2;
-    freq[char] = (freq[char] || 0) + 1;
-  }
-
-  for (let char in freq) {
-    console.log(`${char}: ${freq[char]}`);
-  }
-
-  //a:1, b:1,c:1,s:1,f:2,o:1,i:2,
-
   const calculateEMI = (downpayment) => {
     if (!cost) return;
 
